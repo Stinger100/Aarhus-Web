@@ -40,7 +40,7 @@ namespace AarhusWebDevCoop.Controller
                 smtp.UseDefaultCredentials = false;
                 smtp.EnableSsl = true; smtp.Host = "smtp.gmail.com";
                 smtp.Port = 587;
-                smtp.Credentials = new System.Net.NetworkCredential("marian.zoicas@gmail.com", "extrem21");
+                smtp.Credentials = new System.Net.NetworkCredential("radubosssss@gmail.com", "raduboss");
                 smtp.EnableSsl = true;
                 // send mail
                 smtp.Send(message);
