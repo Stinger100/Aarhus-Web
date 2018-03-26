@@ -64,12 +64,12 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Mobile
+		/// Email
 		///</summary>
-		[ImplementPropertyType("mobile")]
-		public string Mobile
+		[ImplementPropertyType("email")]
+		public string Email
 		{
-			get { return this.GetPropertyValue<string>("mobile"); }
+			get { return this.GetPropertyValue<string>("email"); }
 		}
 
 		///<summary>

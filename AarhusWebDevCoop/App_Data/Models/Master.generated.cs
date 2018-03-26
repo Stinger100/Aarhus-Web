@@ -31,7 +31,7 @@ namespace Umbraco.Web.PublishedContentModels
 		string MetaKeywords { get; }
 
 		/// <summary>Hide from navigation</summary>
-		bool UmbracoNavHide { get; }
+		bool UmbracoNaviHide { get; }
 	}
 
 	/// <summary>Master</summary>
@@ -86,13 +86,13 @@ namespace Umbraco.Web.PublishedContentModels
 		///<summary>
 		/// Hide from navigation
 		///</summary>
-		[ImplementPropertyType("umbracoNavHide")]
-		public bool UmbracoNavHide
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
 		{
-			get { return GetUmbracoNavHide(this); }
+			get { return GetUmbracoNaviHide(this); }
 		}
 
 		/// <summary>Static getter for Hide from navigation</summary>
-		public static bool GetUmbracoNavHide(IMaster that) { return that.GetPropertyValue<bool>("umbracoNavHide"); }
+		public static bool GetUmbracoNaviHide(IMaster that) { return that.GetPropertyValue<bool>("umbracoNaviHide"); }
 	}
 }

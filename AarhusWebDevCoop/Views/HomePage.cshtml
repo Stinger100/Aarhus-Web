@@ -4,7 +4,14 @@
 @{
 	Layout = "Master.cshtml";
 }
+<div class="container">
+    <div class="row">
+        @Model.Content.GetPropertyValue("mainContent")
+    </div>
+    <div class="row" style="padding-top:50px">
+        <div>@Umbraco.RenderMacro("listNewestProjects") </div>
+    </div>
 
-@Model.Content.GetPropertyValue("mainContent")
-@Model.Content.GetPropertyValue("footer")
-<div>@Umbraco.RenderMacro("listNewestProjects") </div>
+</div>
+
+

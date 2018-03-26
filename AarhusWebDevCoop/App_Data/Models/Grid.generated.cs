@@ -75,10 +75,10 @@ namespace Umbraco.Web.PublishedContentModels
 		///<summary>
 		/// Hide from navigation
 		///</summary>
-		[ImplementPropertyType("umbracoNavHide")]
-		public bool UmbracoNavHide
+		[ImplementPropertyType("umbracoNaviHide")]
+		public bool UmbracoNaviHide
 		{
-			get { return Umbraco.Web.PublishedContentModels.Master.GetUmbracoNavHide(this); }
+			get { return Umbraco.Web.PublishedContentModels.Master.GetUmbracoNaviHide(this); }
 		}
 	}
 }

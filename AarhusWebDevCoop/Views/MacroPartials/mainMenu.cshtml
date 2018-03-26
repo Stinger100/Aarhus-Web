@@ -25,9 +25,17 @@
             <ul class="dropdown-menu">
                 @foreach (IPublishedContent subMenuItem in item.Children)
                 {
+
+                    var isProtected = umbraco.library.IsProtected(subMenuItem.Id, item.Path);
+                    var loginAccess = umbraco.library.IsProtected(subMenuItem.Id, subMenuItem.Path) 
+                        && umbraco.library.HasAccess(subMenuItem.Id, subMenuItem.Path);
+
+                    if (!isProtected || loginAccess)
+                    {
                     <li class="@(item.IsAncestorOrSelf(Model.Content) ? "current" : null)">
                         <a href="@subMenuItem.Url">@subMenuItem.Name</a>
                     </li>
+                    }
                 }
             </ul>
         </li>
@@ -56,5 +64,3 @@
 </ul>
  
 }
-
-

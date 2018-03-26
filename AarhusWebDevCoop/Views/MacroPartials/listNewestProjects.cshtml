@@ -26,8 +26,13 @@
                 {
                     if (umbraco.library.GetPreValueAsString(subMenuItem.GetPropertyValue<int>("projectStatus")) == "Completed")
                     {
-                                <div>@(item.IsAncestorOrSelf(Model.Content) ? "current" : null)
-                                    <a href="@subMenuItem.Url">@subMenuItem.Name</a></div>
+                                
+                                <ul class="list-group">
+                                    @(item.IsAncestorOrSelf(Model.Content) ? "current" : null)
+                                    <li class="list-group-item">
+                                        <a href="@subMenuItem.Url">@subMenuItem.Name</a>
+                                    </li>
+                                </ul>
 
                             }
                         }

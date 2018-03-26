@@ -3,4 +3,5 @@
 @{
 	Layout = "Master.cshtml";
 }
-<h2>@Model.Content.ArticleTitle</h2>
+<h1 style="text-align: center">@Model.Content.ArticleTitle</h1>
+@Umbraco.Field("articleContent")

@@ -27,7 +27,7 @@ namespace AarhusWebDevCoop.Controller
             }
 
             MailMessage message = new MailMessage();
-            message.To.Add("marian.zoicas@gmail.com");
+            message.To.Add("radubosssss@gmail.com");
             message.Subject = model.Subject;
             message.From = new MailAddress(model.Email, model.Name);
             message.Body = model.Message;
@@ -54,7 +54,7 @@ namespace AarhusWebDevCoop.Controller
 
             Services.ContentService.Save(comment);
             //Services.ContentService.SaveAndPublishWithStatus(comment);
-
+            //
             return RedirectToCurrentUmbracoPage();
 
             
